@@ -1,11 +1,11 @@
-package com.itguigu.principle.inversion.inprove;
+package com.itguigu.principle.inversion.improve;
 
 /**
  * @description:
  * @author: David Allen
- * @date: 2021-03-09
+ * @date: 2021-04-14
  **/
-public class DependencyInversion {
+public class DependecyInversion {
 
     public static void main(String[] args) {
 
@@ -27,26 +27,28 @@ class Email implements IReceiver {
 
     @Override
     public String getInfo() {
-
-        return "电子邮件信息：hello , word";
+        return "电子邮件信息：hello world......";
     }
 }
 
-//增加微信
 class WeiXin implements IReceiver {
 
     @Override
     public String getInfo() {
-        return "微信消息：hello , ok";
+        return "微信信息：hello ok......";
     }
 }
 
-//方式2
 class Person {
 
-    //这里我们是对接口的依赖
+    //依赖接口，不依赖具体是类
     public void receive(IReceiver receiver) {
 
         System.out.println(receiver.getInfo());
     }
 }
+
+//完成Person接收电子邮件消息的功能
+//方式2
+
+

@@ -3,7 +3,7 @@ package com.itguigu.singleton.type5;
 /**
  * @description:
  * @author: David Allen
- * @date: 2021-03-16
+ * @date: 2021-04-27
  **/
 public class SingletonTest05 {
 
@@ -11,31 +11,29 @@ public class SingletonTest05 {
 
         Singleton instance1 = Singleton.getInstance();
         Singleton instance2 = Singleton.getInstance();
-
         System.out.println(instance1 == instance2);
-        System.out.println("instance1.hashCode() == " + instance1.hashCode());
-        System.out.println("instance2.hashCode() == " + instance2.hashCode());
+        System.out.println("instance1.hashCode() = " + instance1.hashCode());
+        System.out.println("instance2.hashCode() = " + instance2.hashCode());
 
     }
 
 }
 
-//同步代码块的方式（不推荐使用）
 class Singleton {
 
-    private static Singleton instance;
+    private static Singleton singleton;
 
     private Singleton() {
     }
 
     public static Singleton getInstance() {
-
-        if (instance == null) {
+        if (singleton == null) {
 
             synchronized (Singleton.class) {
-                instance = new Singleton();
+
+                singleton = new Singleton();
             }
         }
-        return instance;
+        return singleton;
     }
 }

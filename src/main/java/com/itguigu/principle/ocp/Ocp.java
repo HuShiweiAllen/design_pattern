@@ -3,17 +3,17 @@ package com.itguigu.principle.ocp;
 /**
  * @description:
  * @author: David Allen
- * @date: 2021-03-10
+ * @date: 2021-04-25
  **/
 public class Ocp {
 
     public static void main(String[] args) {
 
-        //使用看看存在的问题
         GraphicEditor graphicEditor = new GraphicEditor();
+
         graphicEditor.drawShape(new Rectangle());
         graphicEditor.drawShape(new Circle());
-        graphicEditor.drawRectangle(new Triangle());
+        graphicEditor.drawShape(new Triangle());
 
     }
 
@@ -22,44 +22,42 @@ public class Ocp {
 //这是一个用于绘图的类[使用方]
 class GraphicEditor {
 
-    //接收Shape对象，然后根据type，来绘制不同的图形
+    //接收Shape对象，然后根据type，来绘制不同的图
     public void drawShape(Shape s) {
 
         if (s.m_type == 1) {
-
             drawRectangle(s);
         } else if (s.m_type == 2) {
-
             drawCircle(s);
         } else if (s.m_type == 3) {
-
-            drawRectangle(s);
+            drawTriangle(s);
         }
+
     }
 
-    //
+    //绘制矩形
     public void drawRectangle(Shape r) {
-
-        System.out.println("绘制矩形");
+        System.out.println("绘制矩形......");
     }
 
-    public void drawCircle(Shape r) {
+    //绘制圆形
+    public void drawCircle(Shape c) {
 
-        System.out.println("绘制圆形");
+        System.out.println("绘制圆形......");
     }
 
-    public void Triangle(Shape r) {
+    //绘制三角形
+    public void drawTriangle(Shape t) {
 
-        System.out.println("绘制三角形");
+        System.out.println("绘制三角形......");
     }
 
 }
 
-//Shape类，是一个基类
+//Share类，基类
 class Shape {
 
     int m_type;
-
 }
 
 class Rectangle extends Shape {
@@ -76,7 +74,7 @@ class Circle extends Shape {
     }
 }
 
-//新增画三角形
+//新增绘制三角形
 class Triangle extends Shape {
 
     Triangle() {

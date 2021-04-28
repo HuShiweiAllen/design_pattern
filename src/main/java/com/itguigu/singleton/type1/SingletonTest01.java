@@ -3,29 +3,26 @@ package com.itguigu.singleton.type1;
 /**
  * @description:
  * @author: David Allen
- * @date: 2021-03-15
+ * @date: 2021-04-27
  **/
 public class SingletonTest01 {
 
     public static void main(String[] args) {
 
-        //测试
         Singleton instance1 = Singleton.getInstance();
         Singleton instance2 = Singleton.getInstance();
-
         System.out.println(instance1 == instance2);
-        System.out.println("instance1.hashCode()=" + instance1.hashCode());
-        System.out.println("instance2.hashCode()=" + instance2.hashCode());
+        System.out.println("instance1.hashCode() = " + instance1.hashCode());
+        System.out.println("instance2.hashCode() = " + instance2.hashCode());
 
     }
 
-
 }
 
-//饿汉式（静态变量）
+//饿汉式(静态变量)
 class Singleton {
 
-    //1 私有构造方法
+    //1 构造器私有化，外部能访问
     private Singleton() {
     }
 

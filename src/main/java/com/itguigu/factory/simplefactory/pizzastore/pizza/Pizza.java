@@ -11,6 +11,10 @@ public abstract class Pizza {
     //匹萨名字
     protected String name;
 
+    public void setName(String name) {
+        this.name = name;
+    }
+
     //准备原材料，不同的匹萨不一样，因此我们做成抽像方法
     public abstract void prepare();
 
@@ -27,9 +31,5 @@ public abstract class Pizza {
     //打包
     public void box() {
         System.out.println(name + " boxing ......");
-    }
-
-    public void setName(String name) {
-        this.name = name;
     }
 }

@@ -1,8 +1,5 @@
 package com.itguigu.factory.simplefactory.pizzastore.order;
 
-import com.itguigu.factory.simplefactory.pizzastore.pizza.CheesePizza;
-import com.itguigu.factory.simplefactory.pizzastore.pizza.GreekPizza;
-import com.itguigu.factory.simplefactory.pizzastore.pizza.PepperPizza;
 import com.itguigu.factory.simplefactory.pizzastore.pizza.Pizza;
 import com.itguigu.factory.simplefactory.pizzastore.pizza.SimpleFactory;
 import java.io.BufferedReader;

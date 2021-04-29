@@ -1,5 +1,7 @@
 package com.itguigu.factory.simplefactory.pizzastore.order;
 
+import com.itguigu.factory.simplefactory.pizzastore.pizza.SimpleFactory;
+
 /**
  * @description:
  * @author: David Allen
@@ -13,10 +15,10 @@ public class PizzaStore {
         //new OrderPizza();
 
         //使用简单工厂模式
-        //new OrderPizza(new SimpleFactory());
+        new OrderPizza(new SimpleFactory());
 
         //使用静态工厂模式
-        new OrderPizza2();
+        //new OrderPizza2();
 
     }
 }

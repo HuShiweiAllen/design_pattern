@@ -37,6 +37,9 @@ public class OrderPizza2 {
         } while (true);
     }
 
+    /**
+     * 获得用户输入的pizza类型
+     */
     private String getType() {
         String type = "";
         try {

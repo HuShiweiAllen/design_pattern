@@ -11,6 +11,7 @@ public class PizzaStore {
 
         //创建北京各种口味的pizza
         new BJOrderPizza();
+        System.out.println("=================");
     }
 
 }

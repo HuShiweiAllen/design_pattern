@@ -8,6 +8,7 @@ package com.itguigu.builder.improve;
 //抽象的建造者
 public abstract class HouseBuilder {
 
+    //这里要组合产品(房子)
     protected House house = new House();
 
     //将建造的流程写好，抽象的方法

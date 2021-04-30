@@ -15,7 +15,7 @@ public class HouseDirector {
         this.houseBuilder = houseBuilder;
     }
 
-    //通过setter传入houseBuilder
+    //通过setter方法传入houseBuilder
     public void setHouseBuilder(HouseBuilder houseBuilder) {
         this.houseBuilder = houseBuilder;
     }
